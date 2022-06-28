@@ -2,16 +2,17 @@ add_executable(visualizing_collisions_tutorial
   src/visualizing_collisions_tutorial.cpp
 )
 
+target_include_directories(visualizing_collisions_tutorial 
+  PUBLIC include)
+
 target_link_libraries(visualizing_collisions_tutorial
-  ${interactive_markers_LIBRARIES}
-  interactivity_utils
-  ${catkin_LIBRARIES}
-  ${Boost_LIBRARIES}
-)
+  interactivity_utils)
 
-install(
-  TARGETS
-  visualizing_collisions_tutorial
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+ament_target_dependencies(visualizing_collisions_tutorial
+  ${THIS_PACKAGE_INCLUDE_DEPENDS} Boost)
 
-install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(TARGETS visualizing_collisions_tutorial 
+  DESTINATION lib/${PROJECT_NAME})
+  
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME})

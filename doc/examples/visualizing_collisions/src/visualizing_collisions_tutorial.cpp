@@ -36,7 +36,7 @@
 
 // This code goes with the Collision Contact Visualization tutorial
 
-#include <ros/ros.h>
+#include <rclcpp/rclcpp.hpp>
 #include "interactivity/interactive_robot.h"
 #include "interactivity/pose_string.h"
 
