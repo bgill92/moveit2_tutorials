@@ -6,6 +6,8 @@
 Pick and Place
 ==============
 
+NOTE: The functionality used in this tutorial is deprecated. To perform a pick and place operation, MoveIt Task Constructor should be used. Here is a tutorial that goes over how to perform a pick and place operation with MoveIt Task Constructor: `Pick and Place with MoveIt Task Constructor <https://moveit.picknik.ai/humble/doc/tutorials/pick_and_place_with_moveit_task_constructor/pick_and_place_with_moveit_task_constructor.html>`. MoveIt Task Constructor provides a way to plan for tasks that consist of multiple different subtasks, such as a pick and place operation. More information on the MoveIt Task Constructor can be found `here. <https://moveit.picknik.ai/humble/doc/examples/moveit_task_constructor/moveit_task_constructor_tutorial.html>` 
+
 In MoveIt, grasping is done using the MoveGroup interface. In order to grasp an object we need to create ``moveit_msgs::Grasp`` msg which will allow defining the various poses and postures involved in a grasping operation.
 Watch this video to see the output of this tutorial:
 
